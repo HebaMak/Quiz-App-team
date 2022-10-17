@@ -1,0 +1,480 @@
+:root {
+  --primary-color: #f1f3f5;
+  --secondary-color: #2a4bb7;
+  --darkerSecondary-color: #203d9d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
+
+  background-image: url(https://i.pinimg.com/originals/f1/0f/4e/f10f4eecbafe16d7a2b50a8e06d121f8.gif);
+
+  background-repeat: no-repeat;
+  font-family: 'Designer Notes Bold', sans-serif;
+  overflow: hidden;
+}
+
+.mt-1 {
+  margin-top: 5px;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+.mt-4 {
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable {
+  height: auto;
+  max-height: 80vh;
+  overflow: auto;
+}
+.question {
+  font-size: 1.2rem;
+  width: 500px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1.5rem;
+  display: grid;
+  place-items: center;
+  margin-top: 4rem;
+  color: rgb(18, 15, 15);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-top-left-radius: 100px;
+  background-image: url(https://www.kindpng.com/picc/m/5-58157_page-rip-png-paper-broken-transparent-png.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-family: 'Designer Notes Bold', sans-serif;
+}
+.container {
+  background-image: url(https://i.pinimg.com/originals/22/66/19/226619a3bd7ddd41ce861f2c96976b79.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  font-family: 'Designer Notes Bold', sans-serif;
+}
+
+.selected {
+  border: 1px solid #333;
+  background-color: #eee;
+  transition: all 1s ease;
+}
+
+.right {
+  border: 2px solid rgb(2, 255, 2);
+
+  transition: all 2s ease;
+  font-size: larger;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+    rgba(42, 249, 0, 0.09) 0px 4px 2px, rgba(37, 121, 3, 0.09) 0px 8px 4px,
+    rgba(68, 176, 18, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.wrong {
+  border: 2px solid rgb(248, 6, 6);
+}
+
+li {
+  background-color: rgb(255, 255, 255);
+  font-size: 1;
+  margin-right: 3rem;
+  border-radius: 1px;
+
+  color: rgb(231, 231, 231);
+  padding: 10px;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  width: 400px;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  background-image: url(https://media.istockphoto.com/photos/dark-black-blank-paper-backgrounds-creased-crumpled-surface-old-torn-picture-id1132991089?k=20&m=1132991089&s=612x612&w=0&h=HzeUxfyR1NT9iLoy72fWEqrWAIfW4yaM4kUeKdBt2fg=);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+li:hover {
+  background-image: none;
+  color: black;
+}
+
+#next-question-button {
+  padding: 0.5rem;
+  margin-right: 2.5rem;
+  color: rgb(30, 7, 7);
+  background-color: rgb(225, 150, 10);
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.06rem;
+  font-family: 'Designer Notes Bold', sans-serif;
+  animation: tilt 0.4s ease infinite;
+  cursor: pointer;
+}
+#next-question-button:hover {
+  background-color: rgb(4, 11, 17);
+  color: rgb(241, 178, 31);
+  border: 1px solid;
+  animation: none;
+}
+
+.give-up-button {
+  display: none;
+  padding: 0.5rem;
+  margin-right: 2.5rem;
+  color: rgb(30, 7, 7);
+  background-color: rgb(194, 79, 30);
+  border: 1px solid transparent;
+  font-size: 1rem;
+  width: 120px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.06rem;
+  font-family: 'Designer Notes Bold', sans-serif;
+  animation: tilt 0.4s ease infinite;
+  cursor: pointer;
+}
+.give-up-button:hover {
+  background-color: rgba(85, 38, 38, 0.5);
+  color: rgb(241, 178, 31);
+  border: 1px solid rgb(194, 79, 30);
+  animation: none;
+}
+
+/* animation for next-button */
+@keyframes tilt {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(0.8px, 0.8px) rotate(0.8deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+
+  75% {
+    transform: translate(-0.8px, 0.8px) rotate(-0.8deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/*progression_bar--end*/
+.counterQuestion p {
+  font-weight: bold;
+  margin-top: 50px;
+}
+/*Welcome Page starts*/
+
+.welcome-page {
+  display: flex;
+  max-width: 700px;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-family: 'Designer Notes Bold', sans-serif;
+}
+
+.welcome-page-item {
+  padding: 20px;
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-page-item h1 {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.welcome-page-item button {
+  color: white;
+  background-color: var(--secondary-color);
+  font-size: 1.2rem;
+  padding: 20px;
+  font-family: 'Designer Notes Bold', sans-serif;
+  border-radius: 50%;
+}
+
+.welcome-page-item button:hover {
+  background-color: var(--darkerSecondary-color);
+}
+
+.welcome-page-img {
+  width: 100%;
+}
+
+/*Welcome Page end*/
+/* RESULT PAGE UP TO -------- LINE-261 */
+.result {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://wallpapercave.com/wp/wp8862729.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: white;
+  font-family: 'Designer Notes Bold', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.score {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin-top: -5.5rem;
+
+  transition: all 1s ease;
+  border-radius: 50%;
+  animation: tilt 2s ease infinite;
+}
+
+.resultNum {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 400px;
+  margin-top: -7rem;
+  margin-left: 2rem;
+}
+
+.answer-numbers {
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  margin-top: 0.7rem;
+  font-family: 'Designer Notes', sans-serif;
+}
+
+.percentage {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  background-image: url(https://us.123rf.com/450wm/sureshridle2/sureshridle21010/sureshridle2101000001/9175126-black-page-torn-from-center.jpg?ver=6);
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.percentageNum {
+  margin-top: 10px;
+  color: rgb(23, 69, 12);
+  font-size: 1.6rem;
+}
+
+.wrong-answers {
+  display: flex;
+  height: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 255, 47);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+
+.right-answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(220, 26, 26);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  height: 2rem;
+  gap: 2rem;
+  transition: all 1s ease;
+  font-size: 2rem;
+}
+
+.material-symbols-outlined {
+  font-size: 2rem;
+}
+
+.third {
+  color: rgb(255, 255, 255);
+}
+
+.restart {
+  background-color: black;
+  font-size: 3rem;
+  border: none;
+  border-radius: 50%;
+
+  width: 60px;
+  height: 60px;
+  color: rgb(244, 186, 11);
+  margin-right: 1rem;
+  transition: all 1s ease;
+}
+
+.restart:hover {
+  background-color: rgb(248, 255, 245);
+  padding: 3px;
+}
+
+.score:hover {
+  rotate: 10deg;
+  animation: none;
+}
+
+.wrong-answers:hover {
+  background-color: rgb(201, 234, 182);
+  color: rgb(0, 255, 81);
+}
+
+.right-answers:hover {
+  background-color: rgb(192, 19, 50);
+  color: rgb(153, 30, 30);
+}
+
+.third:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* ============================= END OF RESULT PAGE */
+
+/* MAKE RESULT PAGE A BIT RESPONSIVE ------------ */
+
+/* =========================================================== */
+/* progressionBar start ------------ */
+.progress-container {
+  position: relative;
+  width: 400px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  top: 10px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.progress {
+  width: 10px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: rgb(27, 90, 52);
+  margin-left: 3px;
+}
+/* ========================== */
+.score-container {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid rgb(27, 90, 52);
+  border-radius: 50%;
+  color: white;
+
+  top: 0px;
+  right: 0%;
+  margin-left: 5px;
+
+  text-align: center;
+}
+
+.score-num {
+  position: relative;
+  margin: 14px;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+
+  font-family: 'Designer Notes Bold', sans-serif;
+}
+#continue-quiz {
+  background-color: transparent;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: -50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: rgb(62, 87, 77);
+}
+#continue-quiz:hover {
+  color: rgb(135, 223, 135);
+}
+
+/* @media screen and (min-width: 1000px){
+  
+} */
+@media screen and (max-width: 900px) {
+  .score {
+    width: 100px;
+    height: 100px;
+  }
+
+  .percentage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .percentageNum {
+    font-size: 1.2rem;
+  }
+
+  .restart {
+    margin-top: -3rem;
+  }
+}
