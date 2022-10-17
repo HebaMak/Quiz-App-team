@@ -9,7 +9,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { result } from '../views/result.js';
-import { progressionBar } from '../views/progressionBar.js';
+
 
 import { quizData } from '../data.js';
 
@@ -57,7 +57,7 @@ const nextQuestion = () => {
   if (quizData.currentQuestionIndex < quizData.questions.length) {
     initQuestionPage();
 
-    progressionBar();
+    
 
     localStorage.setItem('currentScore', quizData.currentScore);
     localStorage.setItem('currentIndex', quizData.currentQuestionIndex);

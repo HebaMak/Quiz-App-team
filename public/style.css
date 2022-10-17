@@ -11,13 +11,13 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
-
+ 
   background-image: url(https://i.pinimg.com/originals/f1/0f/4e/f10f4eecbafe16d7a2b50a8e06d121f8.gif);
 
   background-repeat: no-repeat;
-  font-family: 'Designer Notes Bold', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   overflow: hidden;
+
 }
 
 .mt-1 {
@@ -70,11 +70,14 @@ body {
   color: rgb(18, 15, 15);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-top-left-radius: 100px;
+  border-top-right-radius: 0px;
   background-image: url(https://www.kindpng.com/picc/m/5-58157_page-rip-png-paper-broken-transparent-png.png);
   background-size: cover;
   background-repeat: no-repeat;
 
-  font-family: 'Designer Notes Bold', sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 1.1rem;
+
 }
 .container {
   background-image: url(https://i.pinimg.com/originals/22/66/19/226619a3bd7ddd41ce861f2c96976b79.jpg);
@@ -93,7 +96,7 @@ ul {
   flex-direction: column;
   gap: 1rem;
 
-  font-family: 'Designer Notes Bold', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .selected {
@@ -106,7 +109,7 @@ ul {
   border: 2px solid rgb(2, 255, 2);
 
   transition: all 2s ease;
-  font-size: larger;
+  
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
     rgba(42, 249, 0, 0.09) 0px 4px 2px, rgba(37, 121, 3, 0.09) 0px 8px 4px,
     rgba(68, 176, 18, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -118,7 +121,7 @@ ul {
 
 li {
   background-color: rgb(255, 255, 255);
-  font-size: 1;
+
   margin-right: 3rem;
   border-radius: 1px;
 
@@ -134,6 +137,8 @@ li {
   background-repeat: no-repeat;
 
   cursor: pointer;
+  font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 li:hover {
   background-image: none;
@@ -150,8 +155,9 @@ li:hover {
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.06rem;
-  font-family: 'Designer Notes Bold', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   animation: tilt 0.4s ease infinite;
+  font-size:0.85rem;
   cursor: pointer;
 }
 #next-question-button:hover {
@@ -173,9 +179,9 @@ li:hover {
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.06rem;
-  font-family: 'Designer Notes Bold', sans-serif;
-  animation: tilt 0.4s ease infinite;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  animation: tilt 0.4s ease infinite;
   cursor: pointer;
+  font-size: 0.85rem;
 }
 .give-up-button:hover {
   background-color: rgba(85, 38, 38, 0.5);
@@ -245,7 +251,7 @@ li:hover {
   background-color: var(--secondary-color);
   font-size: 1.2rem;
   padding: 20px;
-  font-family: 'Designer Notes Bold', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   border-radius: 50%;
 }
 
@@ -267,7 +273,8 @@ li:hover {
   background-repeat: no-repeat;
 
   color: white;
-  font-family: 'Designer Notes Bold', sans-serif;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
   display: grid;
   place-items: center;
 }
@@ -294,10 +301,10 @@ li:hover {
 }
 
 .answer-numbers {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: rgb(255, 255, 255);
-  margin-top: 0.7rem;
-  font-family: 'Designer Notes', sans-serif;
+ 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .percentage {
@@ -434,11 +441,11 @@ li:hover {
 
 .score-num {
   position: relative;
-  margin: 14px;
+  margin: 10px;
   font-size: 1.5rem;
   color: rgb(0, 0, 0);
 
-  font-family: 'Designer Notes Bold', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #continue-quiz {
   background-color: transparent;
